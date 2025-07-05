@@ -21,6 +21,10 @@ router.post('/contact', (req, res) => {
   res.send(`<h2>Thanks, ${name}!</h2>`);
 });
 
+router.get('/profile', (req, res) => {
+    res.send('<h2>This is your profile page</h2>');
+  });
+
 // Serve static HTML file (if exists)
 router.get('/html', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
